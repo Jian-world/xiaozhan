@@ -1,0 +1,259 @@
+/* ============================================================
+   校栈 —— 全局样式
+   设计基调：学术可信 + 年轻活力。主色取「深青蓝」，象征专业与可信；
+   辅助色取「暖橙」，用于强调行动与成果。
+   ============================================================ */
+
+:root {
+  /* 品牌色 */
+  --xz-primary: #1f6f6b;
+  --xz-primary-light: #2f8d88;
+  --xz-primary-lighter: #e6f2f1;
+  --xz-primary-dark: #15524f;
+  --xz-accent: #e07a3f;
+  --xz-accent-light: #fdf0e7;
+
+  /* 语义色 */
+  --xz-success: #3f9e6a;
+  --xz-warning: #d99a2b;
+  --xz-danger: #cc4b4b;
+  --xz-info: #6b7b8c;
+
+  /* 中性色 */
+  --xz-text-primary: #1c2b33;
+  --xz-text-regular: #445662;
+  --xz-text-secondary: #5b6b78;
+  --xz-text-placeholder: #98a6b2;
+  --xz-border: #e2e8ec;
+  --xz-border-light: #eef2f4;
+  --xz-bg-page: #f6f8f9;
+  --xz-bg-card: #ffffff;
+  --xz-bg-hover: #f2f6f7;
+
+  /* 尺寸 */
+  --xz-radius-sm: 6px;
+  --xz-radius: 10px;
+  --xz-radius-lg: 16px;
+  --xz-shadow-sm: 0 1px 3px rgba(28, 43, 51, 0.06);
+  --xz-shadow: 0 4px 16px rgba(28, 43, 51, 0.08);
+  --xz-shadow-lg: 0 12px 32px rgba(28, 43, 51, 0.12);
+  --xz-header-height: 64px;
+
+  /* 覆盖 Element Plus 主色 */
+  --el-color-primary: #1f6f6b;
+  --el-color-primary-light-3: #4a918d;
+  --el-color-primary-light-5: #7db2af;
+  --el-color-primary-light-7: #b0d2d0;
+  --el-color-primary-light-8: #cfe3e2;
+  --el-color-primary-light-9: #e6f2f1;
+  --el-color-primary-dark-2: #15524f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--xz-text-primary);
+  background: var(--xz-bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ---------- 通用工具类 ---------- */
+.xz-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.xz-card {
+  background: var(--xz-bg-card);
+  border: 1px solid var(--xz-border-light);
+  border-radius: var(--xz-radius);
+  box-shadow: var(--xz-shadow-sm);
+}
+
+.xz-page-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--xz-text-primary);
+}
+
+.xz-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--xz-text-primary);
+  padding-left: 10px;
+  border-left: 3px solid var(--xz-primary);
+  line-height: 1.3;
+}
+
+.xz-text-muted {
+  color: var(--xz-text-secondary);
+}
+
+.xz-text-small {
+  font-size: 12px;
+}
+
+.xz-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.xz-gap-8 {
+  gap: 8px;
+}
+
+.xz-mt-8 {
+  margin-top: 8px;
+}
+
+.xz-mt-16 {
+  margin-top: 16px;
+}
+
+.xz-mt-24 {
+  margin-top: 24px;
+}
+
+.xz-empty-hint {
+  padding: 48px 0;
+  text-align: center;
+  color: var(--xz-text-placeholder);
+}
+
+/* ---------- 滚动条 ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d3dde2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8c6cd;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ---------- Element Plus 细节调整 ---------- */
+.el-card {
+  border-radius: var(--xz-radius);
+  border-color: var(--xz-border-light);
+}
+
+.el-button--primary {
+  --el-button-bg-color: var(--xz-primary);
+  --el-button-border-color: var(--xz-primary);
+  --el-button-hover-bg-color: var(--xz-primary-light);
+  --el-button-hover-border-color: var(--xz-primary-light);
+}
+
+.el-table {
+  --el-table-border-color: var(--xz-border-light);
+  --el-table-header-bg-color: #f8fafb;
+}
+
+.el-table th.el-table__cell {
+  font-weight: 600;
+  color: var(--xz-text-primary);
+}
+
+.el-tag {
+  border-radius: 4px;
+}
+
+.el-dialog {
+  border-radius: var(--xz-radius-lg);
+}
+
+.el-message-box {
+  border-radius: var(--xz-radius-lg);
+}
+
+/* 富文本展示区 */
+.xz-rich-text {
+  line-height: 1.8;
+  color: var(--xz-text-primary);
+  word-break: break-word;
+}
+
+.xz-rich-text img {
+  max-width: 100%;
+  border-radius: var(--xz-radius-sm);
+}
+
+.xz-rich-text p {
+  margin: 0 0 12px;
+}
+
+.xz-rich-text h1,
+.xz-rich-text h2,
+.xz-rich-text h3 {
+  margin: 20px 0 10px;
+  font-weight: 600;
+}
+
+.xz-rich-text ul,
+.xz-rich-text ol {
+  padding-left: 22px;
+  margin: 0 0 12px;
+  list-style: revert;
+}
+
+.xz-rich-text pre {
+  background: #f4f7f8;
+  border-radius: var(--xz-radius-sm);
+  padding: 12px 14px;
+  overflow-x: auto;
+  font-size: 13px;
+}
+
+.xz-rich-text code {
+  font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+}
